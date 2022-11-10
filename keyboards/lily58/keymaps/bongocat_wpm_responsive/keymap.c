@@ -266,9 +266,9 @@ static void render_anim(void) {
     }
 }
 
-void oled_task_user(void) {
+bool oled_task_user(void) {
     if (is_keyboard_master()) {
-        oled_set_cursor(0,1);
+        /* oled_set_cursor(0,1);
         uint8_t n = get_current_wpm();
         char    wpm_counter[4];
         wpm_counter[3] = '\0';
@@ -280,9 +280,10 @@ void oled_task_user(void) {
         oled_set_cursor(0,3); {
             oled_write_ln(read_layer_state(), false);
         }
-    } else {
+    } else { */
         render_anim();
     }
+    return false;
 }
 #endif // OLED_DRIVER_ENABLE
 
