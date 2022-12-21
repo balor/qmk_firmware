@@ -59,9 +59,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |   !  |   @  |   #  |   $  |   %  |                    |   ^  |   &  |   *  |   (  |   )  |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |      |      |      |      |-------.    ,-------|   |  |   _  |   +  |   {  |   }  |   ~  |
+ * |      |      |      |      |      |      |-------.    ,-------|   |  |   -  |   +  |   {  |   }  |   ~  |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
- * |      |      |      |      |      |      |-------|    |-------|   \  |   -  |   =  |   {  |   }  |   `  |
+ * |      |      |      |      |      |      |-------|    |-------|   \  |   _  |   =  |   {  |   }  |   `  |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI |LOWER | /Space  /       \Enter \  |RAISE | RALT | RGUI |
  *                   |      |      |      |/       /         \      \ |      |      |      |
@@ -70,8 +70,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_LOWER] = LAYOUT(
   _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______,
   _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                   KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, _______,
-  _______, _______, _______, _______, _______, _______,                   KC_PIPE, KC_UNDS, KC_PLUS, KC_LCBR,  KC_RCBR,  KC_TILD,
-  _______, _______, _______, _______, _______, _______, _______, _______, KC_BSLS, KC_MINS, KC_EQL,  KC_LBRC,  KC_RBRC,  KC_GRV,
+  _______, _______, _______, _______, _______, _______,                   KC_PIPE, KC_MINS, KC_PLUS, KC_LCBR,  KC_RCBR,  KC_TILD,
+  _______, _______, _______, _______, _______, _______, _______, _______, KC_BSLS, KC_UNDS, KC_EQL,  KC_LBRC,  KC_RBRC,  KC_GRV,
                              _______, _______, _______, _______, _______, _______, _______, _______
 ),
 /* RAISE
@@ -100,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |MPlay | Vol+ |MStop |      |                    |EEPRst|Bootld|      |      |      |      |
+ * |      |      |MPlay | Vol+ |MStop |      |                    |EE_CLR|Bootld|      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |      |MPrev | Vol- |MNext |      |-------.    ,-------|      |      |      |      |      |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
@@ -112,7 +112,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
   [_ADJUST] = LAYOUT(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  XXXXXXX, XXXXXXX, KC_MPLY, KC_VOLU, KC_MSTP, XXXXXXX,                   EEP_RST, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  XXXXXXX, XXXXXXX, KC_MPLY, KC_VOLU, KC_MSTP, XXXXXXX,                   EE_CLR,  QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, XXXXXXX, KC_MPRV, KC_VOLD, KC_MNXT, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                              _______, _______, _______, _______, _______, _______, _______, _______
