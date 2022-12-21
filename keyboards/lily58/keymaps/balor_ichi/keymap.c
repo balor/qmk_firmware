@@ -300,12 +300,13 @@ static void render_anim(void) {
             anim_timer = timer_read();
             animation_phase();
         }
-        anim_sleep = timer_read();
+        // anim_sleep = timer_read();
     } else {
-        if(timer_elapsed(anim_sleep) > SLEEP_TIMER) {
+        /* if(timer_elapsed(anim_sleep) > SLEEP_TIMER) {
            oled_off();
-        }
-        else if(timer_elapsed(anim_timer) > ANIM_FRAME_DURATION) {
+        } */
+        // else 
+        if(timer_elapsed(anim_timer) > ANIM_FRAME_DURATION) {
             anim_timer = timer_read();
             animation_phase();
         }
